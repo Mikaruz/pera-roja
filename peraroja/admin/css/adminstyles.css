@@ -1,0 +1,259 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;800&family=Open+Sans:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito", sans-serif;
+  font-size: 20px;
+}
+
+body {
+  background-color: #ffffff;
+}
+
+/* HEADER */
+
+.principal-header {
+  background-color: #ffffff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.principal-header a {
+  color: black;
+  text-decoration: none;
+}
+
+.pera-roja-logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pera-roja-logo h2 {
+  color: rgb(200, 1, 1);
+  margin: 0;
+  font-size: 30px;
+  margin-right: 40px;
+}
+
+.pera-roja-logo img {
+  margin-right: 10px;
+  text-align: right;
+  height: 60px;
+  width: auto;
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  float: left;
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.nav-links li:last-child {
+  margin-right: 0;
+}
+
+.nav-links img {
+  margin-right: 10px;
+  height: 30px;
+  width: auto;
+}
+
+.title {
+  margin-top: 20px;
+  margin-bottom: 40px;
+  font-size: 40px;
+  text-align: center;
+}
+
+.container {
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 30px;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  padding: 25px;
+}
+
+
+.platos-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.crud-form {
+  width: 15%;
+}
+
+.crud-form h2 {
+  text-align: center;
+}
+
+.crud-form input, .crud-form button , .crud-form select {
+  display: block;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.crud-form .button-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.image-file{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.button-container{
+  flex-direction: column;
+}
+
+.data-table {
+  width: 80%;
+}
+
+.data-table-order {
+  width: 100%;
+}
+
+.data-table h2 {
+  text-align: center;
+}
+
+.data-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.data-table th, .data-table td {
+  padding: 8px;
+  text-align: center;
+}
+
+.data-table th {
+  background-color: #f2f2f2;
+}
+
+.data-table td img {
+  max-width: 100px;
+}
+
+.data-table-order h2 {
+  text-align: center;
+}
+
+.data-table-order table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.data-table-order th, .data-table-order td {
+  padding: 8px;
+  text-align: center;
+}
+
+.data-table-order th {
+  background-color: #f2f2f2;
+}
+
+
+.btn-agregar{
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #00b600;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-elegir{
+  padding: 5px 10px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  background-color: #027a02;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-borrar{
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: #b90d0d;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-agregar:hover{
+  background-color: #0a6602;
+}
+
+.btn-modificar{
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-modificar:hover{
+  background-color: #0056b3;
+}
+
+.btn-cancelar {
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #e91d1d;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-cancelar:hover {
+  background-color: #a70000;
+}
+
+
+.admin-panel {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.admin-panel h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.centered-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+.centered-table th, .centered-table td {
+  padding: 10px;
+  text-align: center;
+}
+
+.piechart-container {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}

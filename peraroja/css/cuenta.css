@@ -1,0 +1,96 @@
+.cuenta {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+.datos-personales {
+  margin-bottom: 20px;
+}
+
+.datos-personales h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.historial-pedidos h2 {
+  font-size: 24px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.historial-pedidos table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.historial-pedidos th,
+.historial-pedidos td {
+  padding: 10px;
+  text-align: left;
+}
+
+.historial-pedidos thead {
+  background-color: #f9f9f9;
+}
+
+.historial-pedidos tbody .historial-pedidos tr:nth-child(even) {
+  background-color: #ffffff;
+}
+
+.historial-pedidos a {
+  color: #337ab7;
+  text-decoration: none;
+}
+
+.historial-pedidos a:hover {
+  text-decoration: underline;
+}
+
+.btn-cerrar-sesion {
+  background-color: #ff0000;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+
+  text-decoration: none;
+}
+
+.btn-favoritos {
+  background-color: #0055f1;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+
+  text-decoration: none;
+}
+
+.btn-calculadora {
+  background-color: #00bb2f;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+
+  text-decoration: none;
+}
+
+.btn-cerrar-sesion:hover {
+  opacity: 0.8;
+}
+.btn-favoritos:hover {
+  opacity: 0.8;
+}
+
+.btn-calculadora:hover {
+  opacity: 0.8;
+}

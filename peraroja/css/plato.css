@@ -1,0 +1,191 @@
+.dish-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.dish-container img {
+  width: 600px;
+  height: auto;
+  margin-right: 80px;
+}
+
+.dish-details {
+  margin-left: 20px;
+}
+
+.dish-details h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.description {
+  margin-bottom: 10px;
+}
+
+.description p {
+  font-size: 16px;
+  margin: 0;
+}
+
+.nutrition {
+  margin-bottom: 10px;
+}
+
+.nutrition h4 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.nutrition ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nutrition li {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.nutrition li span {
+  font-weight: bold;
+}
+
+.quantity {
+  margin-bottom: 10px;
+}
+
+.quantity label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.quantity input {
+  width: 50px;
+  padding: 5px;
+}
+
+.add-to-cart {
+  text-decoration: none;
+  padding: 10px 20px;
+  background-color: #ae2727;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.container-sugerencia {
+  display: flex;
+  justify-content: center;
+}
+
+.image-box {
+  text-align: center;
+  margin: 20px;
+}
+
+.image-box img {
+  width: 350px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.image-text {
+  margin-top: 10px;
+  font-size: 20px;
+  color: #000000;
+}
+
+.sugeridos-title {
+  margin-top: 60px;
+  margin-bottom: 20px;
+  font-size: 40px;
+  text-align: center;
+}
+
+.container-reseña {
+  width: 1200px;
+  margin: 0 auto;
+
+  padding: 20px;
+}
+
+.container-reseña h2 {
+  margin-bottom: 15px;
+  font-size: 25px;
+  text-align: left;
+  margin-top: 0;
+}
+
+.container-reseña .form-group {
+  margin-bottom: 20px;
+}
+
+.container-reseña .form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.container-reseña .form-group input[type="text"],
+.container-reseña .form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+.container-reseña .form-group textarea {
+  height: 100px;
+}
+
+.container-reseña .form-group input[type="submit"] {
+  background-color: #b40505;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.container-reseña .form-group input[type="submit"]:hover {
+  background-color: #830202;
+}
+
+.no-review {
+  background-color: #b40505;
+  margin-bottom: 10px;
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.no-review {
+  font-size: 18px;
+}
+
+.review-done {
+  background-color: #37b405;
+  margin-bottom: 10px;
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.review-done {
+  font-size: 18px;
+}
+
+.review{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}

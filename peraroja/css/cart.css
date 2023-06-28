@@ -1,0 +1,64 @@
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.cart-title {
+  margin-top: 20px;
+  margin-bottom: 40px;
+  font-size: 40px;
+  text-align: center;
+}
+
+.container table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.container th,
+td {
+  padding: 10px;
+  text-align: left;
+}
+
+.container th {
+  background-color: #f2f2f2;
+}
+
+.container tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.remover-btn,
+.pagar-btn {
+  background-color: #008000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+
+
+.remover-btn {
+  background-color: #ff0000;
+  text-decoration: none;
+}
+
+.total {
+  text-align: left;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.total-label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.total-price {
+  font-size: 18px;
+}

@@ -1,0 +1,597 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;800&family=Open+Sans:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito", sans-serif;
+  font-size: 20px;
+}
+
+body {
+  background-color: #ffffff;
+}
+
+/* HEADER */
+
+.principal-header {
+  background-color: #ffffff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.principal-header a {
+  color: black;
+  text-decoration: none;
+}
+
+.pera-roja-logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pera-roja-logo h2 {
+  color: rgb(200, 1, 1);
+  margin: 0;
+  font-size: 30px;
+  margin-right: 40px;
+}
+
+.pera-roja-logo img {
+  margin-right: 10px;
+  text-align: right;
+  height: 60px;
+  width: auto;
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  float: left;
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.nav-links li:last-child {
+  margin-right: 0;
+}
+
+.nav-links img {
+  margin-right: 10px;
+  height: 30px;
+  width: auto;
+}
+
+/* FIRST BANNER */
+
+.first-banner-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.first-banner {
+  width: 100%;
+  height: 60vh;
+  background: #ff416c; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #ff4b2b,
+    #ff416c
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #ff4b2b,
+    #ff416c
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  background-size: cover;
+  background-position: 69%;
+}
+
+.first-banner-text {
+  color: white;
+  margin-top: 160px;
+}
+
+.first-banner-text h3 {
+  line-height: 1;
+  font-size: 70px;
+}
+
+.first-banner-text p {
+  margin-top: 30px;
+  font-size: 20px;
+}
+
+.first-banner-button {
+  background-color: rgb(22, 22, 22); /* Cambia el color de fondo del botón */
+  color: #fff; /* Cambia el color del texto del botón */
+  border: none; /* Quita el borde del botón */
+  padding: 9px 40px; /* Añade un espacio de relleno alrededor del botón */
+  font-size: 16px; /* Cambia el tamaño de fuente del botón */
+  border-radius: 100px; /* Agrega esquinas redondeadas al botón */
+  cursor: pointer; /* Cambia el cursor del mouse al pasar sobre el botón */
+  font-family: "Open Sans", sans-serif;
+  margin-top: 20px;
+}
+
+.first-banner-button:hover {
+  background-color: #df3131;
+  color: white;
+}
+
+.section-one {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.section-one h3 {
+  font-size: 40px;
+  margin-bottom: 50px;
+}
+
+.razones {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+  margin-right: 325px;
+  margin-left: 325px;
+}
+
+.razon {
+  width: calc(25% - 20px);
+  text-align: center;
+  margin-bottom: 20px;
+  position: relative;
+  border-right: 1px solid #ccc;
+  padding-right: 20px;
+}
+
+.razon:last-child {
+  border-right: none;
+}
+
+.razon img {
+  display: block;
+  margin: 0 auto 10px;
+}
+
+.razon p {
+  line-height: 1.2;
+  margin: 0;
+  padding: 0 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.section-three-two {
+  font-size: 40px;
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+.platos {
+  display: flex;
+  justify-content: center;
+}
+
+.plato {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 20px;
+}
+
+.plato img {
+  border-radius: 10%;
+  width: 100%;
+  max-width: 300px;
+  height: 190px;
+  margin-bottom: 10px;
+}
+
+.plato p {
+  text-align: center;
+}
+
+.section-three-title {
+  margin-top: 100px;
+  font-size: 40px;
+  text-align: center;
+}
+
+.section-four-title {
+  margin-top: 100px;
+  font-size: 40px;
+  text-align: center;
+}
+
+.contenedor {
+  width: 90%;
+  max-width: 1200px;
+  overflow: hidden;
+  margin: auto;
+}
+
+.contenedor-servicio {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.section-three-image {
+  width: 550px;
+}
+
+.checklist-servicio {
+  width: 45%;
+}
+
+.service {
+  margin-bottom: 20px;
+  display: flex;
+}
+
+.service p {
+  margin-left: 10px;
+}
+
+.reseña {
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  width: 400px;
+  height: auto;
+  padding: 20px;
+  margin: 0 10px;
+}
+
+.valoración {
+  font-size: 0;
+}
+
+.estrella:before {
+  content: "\2605";
+  font-size: 24px;
+  color: #ffd700;
+}
+
+.comentario {
+  font-size: 20px;
+  line-height: 1.5;
+  margin-top: 10px;
+}
+
+.usuario {
+  font-size: 18px;
+  font-style: italic;
+  text-align: right;
+  margin-top: 10px;
+}
+.reseñas {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.section-five-title {
+  margin-top: 120px;
+  font-size: 40px;
+  text-align: center;
+}
+
+.map {
+  display: flex;
+  margin-top: 30px;
+  margin-bottom: 60px;
+  justify-content: center;
+}
+
+.pie-pagina {
+  width: 100%;
+  background-color: #0a141d;
+}
+.pie-pagina .grupo-1 {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 50px;
+  padding: 45px 0px;
+}
+.pie-pagina .grupo-1 .box figure {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pie-pagina .grupo-1 .box figure img {
+  width: 150px;
+}
+.pie-pagina .grupo-1 .box h2 {
+  color: #fff;
+  margin-bottom: 25px;
+  font-size: 20px;
+}
+.pie-pagina .grupo-1 .box p {
+  color: #efefef;
+  margin-bottom: 10px;
+}
+.pie-pagina .grupo-1 .red-social a {
+  display: inline-block;
+  text-decoration: none;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  color: #fff;
+  margin-right: 10px;
+  background-color: #0d2033;
+  text-align: center;
+  transition: all 300ms ease;
+}
+.pie-pagina .grupo-1 .red-social a:hover {
+  color: #ff416c;
+}
+.pie-pagina .grupo-2 {
+  background-color: #0a1a2a;
+  padding: 15px 10px;
+  text-align: center;
+  color: #fff;
+}
+.pie-pagina .grupo-2 small {
+  font-size: 15px;
+}
+@media screen and (max-width: 800px) {
+  .pie-pagina .grupo-1 {
+    width: 90%;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 30px;
+    padding: 35px 0px;
+  }
+}
+
+/* NUESTROS PLATOS */
+html{
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+.platos-title {
+  margin-top: 20px;
+  margin-bottom: 40px;
+  font-size: 40px;
+  text-align: center;
+}
+
+.container {
+  max-width: 2000px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+.container .title {
+  font-size: 3.5rem;
+  color: #444;
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.container .products-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 2rem;
+}
+
+.container .products-container .product {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: #fff;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  outline: 0.1rem solid #ccc;
+  outline-offset: -1.5rem;
+  cursor: pointer;
+}
+
+.container .products-container .product:hover {
+  outline: 0.2rem solid #222;
+  outline-offset: 0;
+}
+
+.container .products-container .product img {
+  width: 100%;
+  max-width: 300px;
+  height: 190px;
+}
+
+.container .products-container .product:hover img {
+  transform: scale(0.9);
+}
+
+.container .products-container .product h3 {
+  padding: 0.5rem 0;
+  font-size: 2rem;
+  color: #444;
+}
+
+.container .products-container .product:hover h3 {
+  color: #ae2727;
+}
+
+.container .products-container .product .price {
+  font-size: 2rem;
+  color: #444;
+}
+
+.products-preview {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-height: 100vh;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.products-preview .preview {
+  display: none;
+  padding: 2rem;
+  text-align: center;
+  background: #fff;
+  position: relative;
+  margin: 2rem;
+  width: 40rem;
+}
+
+.products-preview .preview.active {
+  display: inline-block;
+}
+
+.products-preview .preview img {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+}
+
+.products-preview .preview .fa-times {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  cursor: pointer;
+  color: #444;
+  font-size: 4rem;
+}
+
+.products-preview .preview .fa-times:hover {
+  transform: rotate(90deg);
+}
+
+.products-preview .preview h3 {
+  color: #444;
+  padding: 0.5rem 0;
+  font-size: 2.5rem;
+}
+
+.products-preview .preview .stars {
+  padding: 1rem 0;
+  font-size: 1.7rem;
+}
+
+.products-preview .preview .stars i {
+  color: #ae2727;
+}
+
+.products-preview .preview .stars span {
+  color: #999;
+}
+
+.products-preview .preview p {
+  line-height: 1.5;
+  padding: 1rem 0;
+  font-size: 1.6rem;
+  color: #777;
+}
+
+.products-preview .preview .price {
+  padding: 1rem 0;
+  font-size: 2.5rem;
+  color: #ae2727;
+  font-weight: bold;
+}
+
+
+.products-preview .preview .calorias{
+  font-size: 20px;
+  color: #ae2727;
+  font-weight: bold;
+}
+
+.products-preview .preview .buttons {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.products-preview .preview .buttons a {
+  flex: 1 1 16rem;
+  padding: 1rem;
+  font-size: 1.8rem;
+  color: #444;
+  border: 0.1rem solid #444;
+}
+
+.products-preview .preview .buttons a.cart {
+  background: #444;
+  color: #fff;
+}
+
+.products-preview .preview .buttons a.cart:hover {
+  background: #111;
+}
+
+.products-preview .preview .buttons a.buy:hover {
+  background: #444;
+  color: #fff;
+}
+
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media (max-width: 768px) {
+  .products-preview .preview img {
+    height: 25rem;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+/* TERMINOS Y CONDICIONES */
+
+.terminos-condiciones-title {
+  margin-top: 20px;
+  margin-bottom: 40px;
+  font-size: 40px;
+  text-align: center;
+}
+
+.terminos-condiciones {
+  margin-left: 150px;
+  margin-right: 150px;
+  margin-bottom: 30px;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  padding: 25px;
+}
+
+.terminos-condiciones h3 {
+  font-size: 25px;
+}
