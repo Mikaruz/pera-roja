@@ -22,7 +22,7 @@
         </a>
       </div>
       <nav>
-      <?php $url = "http://" . $_SERVER['HTTP_HOST'] . "/peraroja" ?>
+      <?php $url = "http://" . $_SERVER['HTTP_HOST'] . "/pera-roja/peraroja" ?>
         <ul class="nav-links">
           <li>
           <a href="<?php echo $url; ?>/admin/inicio.php">Inicio</a>

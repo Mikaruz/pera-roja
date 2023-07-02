@@ -3,7 +3,7 @@
 <?php
 include("config/db.php");
 
-$sqlOrdenes1 = $conection->prepare("SELECT * FROM orders");
+$sqlOrdenes1 = $conection->prepare("SELECT * FROM orders ORDER BY id DESC");
 $sqlOrdenes1->execute();
 $orden1 = $sqlOrdenes1->fetchAll(PDO::FETCH_ASSOC);
 

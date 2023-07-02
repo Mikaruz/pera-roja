@@ -237,14 +237,14 @@ if (isset($_SESSION['cart'])) {
                 </div>
                 <?php
                 // Obtener la hora actual del servidor
+                
                 $hora_actual = date('H:i');
+            
 
-                // Verificar si la hora actual está dentro del rango de 8:00 a 19:00
-                if ($hora_actual >= '08:00' && $hora_actual <= '10:00') {
-                    // El botón puede ser presionado
+                
+                if ($hora_actual >= '08:00' && $hora_actual <= '19:00') {
                     echo '<input type="submit" name="submit" value="Pagar">';
                 } else {
-                    // El botón no puede ser presionado
                     echo '<div id="errorDiv">
               <span id="errorMessage">Fuera de horario de compra</span>
           </div>';
