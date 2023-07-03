@@ -22,7 +22,7 @@
                 <option value="1">Hombre</option>
                 <option value="2">Mujer</option>
             </select>
-            <input type="text" placeholder="edad" name="edad" id="edad">
+            <input type="text" placeholder="Edad" name="edad" id="edad">
             <input type="text" placeholder="Peso en kg" name="peso" id="peso">
             <input type="text" placeholder="Altura en cm" name="altura" id="altura">
             <select name="nivel" id="nivel">

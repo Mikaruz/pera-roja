@@ -33,6 +33,24 @@ switch ($sexo) {
         break;
 }
 
+$objetivo = $row2["objetivo"];
+
+switch ($objetivo) {
+    case '1':
+        $objetivo = -300;
+        break;
+    case '2':
+        $objetivo = 0;
+        break;
+    case '3':
+        $objetivo = 300;
+        break;
+    default:
+        echo "error1";
+        break;
+}
+
+
 $peso = $row2["peso"];
 $altura = $row2["altura"];
 $edad = $row2["edad"];
@@ -82,6 +100,8 @@ if ($nivelActividad == "sedentario") {
     $calorias = $MB * 1.9;
 }
 
+$calorias = $calorias + $objetivo;
+
 // Mostrar el resultado
 
 
@@ -92,7 +112,7 @@ if ($nivelActividad == "sedentario") {
 <h2 class="cart-title">Calculadora de calorías diarias</h2>
 <div class="terminos-condiciones">
     <div class="historial-pedidos">
-        <h2>¡Necesitas consumir <?php echo $calorias?>kcal al día!</h2>
+        <h2>¡Necesitas consumir <?php echo $calorias ?>kcal al día!</h2>
         <table>
             <thead>
                 <tr>
@@ -181,7 +201,24 @@ if ($nivelActividad == "sedentario") {
             </tfoot>
         </table>
     </div>
+    <?php
+    $caloriaDiaria = $calorias - $totalCalorias;
 
+
+    if ($caloriaDiaria > 0) { ?>
+
+
+        <p>Te queda por consumir <strong><?php echo $caloriaDiaria?>kcal</strong></p>
+
+    <?php } else {
+        echo '<p><strong>¡Felicidades, completaste tu meta diaria!</strong></p>';
+    }
+
+
+    ?>
+
+
+    
 </div>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/C0dO40m_HQw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/WnoCFnIiQHw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
