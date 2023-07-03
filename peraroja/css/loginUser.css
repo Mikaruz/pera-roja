@@ -25,6 +25,7 @@
 }
 
 .login-container input[type="email"],
+.login-container select,
 .login-container input[type="text"],
 .login-container input[type="password"] {
   padding: 10px;

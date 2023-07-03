@@ -1,11 +1,88 @@
 <?php include("templates/header.php");
 
+
 $customerid = $_SESSION['customerid'];
 
 $sqlOrders = "SELECT * FROM orders WHERE userid='$customerid' AND DATE(timestamp) = CURDATE()";
 $resultOrders = mysqli_query($conexion, $sqlOrders);
 
+$sql2 = "SELECT * FROM users_data where userid = $customerid";
+$result2 = mysqli_query($conexion, $sql2);
+$row2 = mysqli_fetch_assoc($result2);
 
+
+
+
+
+
+
+// Pedir los datos al usuario
+
+$sexo = $row2["genero"];
+
+
+switch ($sexo) {
+    case '1':
+        $sexo = 'hombre';
+        break;
+    case '2':
+        $sexo = 'mujer';
+        break;
+    default:
+        echo "error1";
+        break;
+}
+
+$peso = $row2["peso"];
+$altura = $row2["altura"];
+$edad = $row2["edad"];
+
+$MB = 0;
+
+$nivelActividad = $row2["nivel"];
+
+switch ($nivelActividad) {
+    case '1':
+        $nivelActividad = "sedentario";
+        break;
+    case '2':
+        $nivelActividad = "ligero";
+        break;
+    case '3':
+        $nivelActividad = "moderado";
+        break;
+    case '4':
+        $nivelActividad = "intenso";
+        break;
+    case '5':
+        $nivelActividad = "activo";
+        break;
+    default:
+        echo "error2";
+        break;
+}
+
+// Calcular el metabolismo basal (MB) según el sexo
+if ($sexo == "hombre") {
+    $MB = 10 * $peso + 6.25 * $altura - 5 * $edad + 5;
+} elseif ($sexo == "mujer") {
+    $MB = 10 * $peso + 6.25 * $altura - 5 * $edad - 161;
+}
+
+// Calcular las calorías necesarias según el nivel de actividad física
+if ($nivelActividad == "sedentario") {
+    $calorias = $MB * 1.2;
+} elseif ($nivelActividad == "ligero") {
+    $calorias = $MB * 1.375;
+} elseif ($nivelActividad == "moderado") {
+    $calorias = $MB * 1.55;
+} elseif ($nivelActividad == "intenso") {
+    $calorias = $MB * 1.725;
+} elseif ($nivelActividad == "muy activo") {
+    $calorias = $MB * 1.9;
+}
+
+// Mostrar el resultado
 
 
 
@@ -15,7 +92,7 @@ $resultOrders = mysqli_query($conexion, $sqlOrders);
 <h2 class="cart-title">Calculadora de calorías diarias</h2>
 <div class="terminos-condiciones">
     <div class="historial-pedidos">
-        <h2>Calculadora de calorías</h2>
+        <h2>¡Necesitas consumir <?php echo $calorias?>kcal al día!</h2>
         <table>
             <thead>
                 <tr>
@@ -47,29 +124,29 @@ $resultOrders = mysqli_query($conexion, $sqlOrders);
                                 $resultProduct = mysqli_query($conexion, $sqlProduct);
 
                                 $rowProduct = mysqli_fetch_assoc($resultProduct);
-                                
-                                $totalCalorias += $rowProduct["calorias"];
-                                $totalProteinas += $rowProduct["proteinas"];
-                                $totalCarbohidratos += $rowProduct["carbohidratos"];
-                                $totalGrasas += $rowProduct["grasas"];
+
+                                $totalCalorias += $rowProduct["calorias"] * $row["quantity"];
+                                $totalProteinas += $rowProduct["proteinas"] * $row["quantity"];
+                                $totalCarbohidratos += $rowProduct["carbohidratos"] * $row["quantity"];
+                                $totalGrasas += $rowProduct["grasas"] * $row["quantity"];
                 ?>
 
 
                                 <tr>
                                     <td>
-                                        <?php echo $rowProduct["nombre"] ?>
+                                        <?php echo $row["quantity"] ?> <?php echo $rowProduct["nombre"] ?>
                                     </td>
                                     <td>
-                                    <?php echo $rowProduct["calorias"] ?>
+                                        <?php echo $rowProduct["calorias"] * $row["quantity"]; ?>kcal
                                     </td>
                                     <td>
-                                    <?php echo $rowProduct["proteinas"] ?>
+                                        <?php echo $rowProduct["proteinas"] * $row["quantity"]; ?>g
                                     </td>
                                     <td>
-                                    <?php echo $rowProduct["carbohidratos"] ?>
+                                        <?php echo $rowProduct["carbohidratos"] * $row["quantity"]; ?>g
                                     </td>
                                     <td>
-                                    <?php echo $rowProduct["grasas"] ?>
+                                        <?php echo $rowProduct["grasas"] * $row["quantity"]; ?>g
                                     </td>
                                 </tr>
 
@@ -80,7 +157,7 @@ $resultOrders = mysqli_query($conexion, $sqlOrders);
                 <?php }
                         }
                     }
-                }else{
+                } else {
                     echo "0 results";
                 }
 
@@ -94,14 +171,14 @@ $resultOrders = mysqli_query($conexion, $sqlOrders);
 
             </tbody>
             <tfoot>
-        <tr>
-            <th>Total</th>
-            <th><?php echo $totalCalorias ?></th>
-            <th><?php echo $totalProteinas ?></th>
-            <th><?php echo $totalCarbohidratos ?></th>
-            <th><?php echo $totalGrasas ?></th>
-        </tr>
-    </tfoot>
+                <tr>
+                    <th>Total</th>
+                    <th><?php echo $totalCalorias ?>kcal</th>
+                    <th><?php echo $totalProteinas ?>g</th>
+                    <th><?php echo $totalCarbohidratos ?>g</th>
+                    <th><?php echo $totalGrasas ?>g</th>
+                </tr>
+            </tfoot>
         </table>
     </div>
 

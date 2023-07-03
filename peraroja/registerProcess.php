@@ -15,6 +15,14 @@ if (isset($_POST['submit'])) {
   $direccion = $_POST['direccion'];
   $postal = $_POST['postal'];
 
+
+  $genero = $_POST['genero'];
+  $peso = $_POST['peso'];
+  $altura = $_POST['altura'];
+  $nivel = $_POST['nivel'];
+  $objetivo = $_POST['objetivo'];
+  $edad = $_POST['edad'];
+
   $sql = "INSERT INTO users (email, password ) VALUES ('$email', '$password' )";
   
   
@@ -32,7 +40,7 @@ if (isset($_POST['submit'])) {
     $userid = $fila['id'];
 
 
-    $sql2 = "INSERT INTO users_data (userid, nombre, apellido, ciudad, direccion, postal, telefono) VALUES ('$userid', '$nombre','$apellido', '$distrito', '$direccion', '$postal', '$telefono' )";
+    $sql2 = "INSERT INTO users_data (userid, nombre, apellido, ciudad, direccion, postal, telefono, genero, altura, peso, nivel, objetivo, edad) VALUES ('$userid', '$nombre','$apellido', '$distrito', '$direccion', '$postal', '$telefono', '$genero', '$altura', '$peso', '$nivel', '$objetivo', '$edad')";
     mysqli_query($conexion, $sql2);
     header('location:index.php');
   } else {
